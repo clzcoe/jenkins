@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('checkout') {
             steps {
@@ -12,17 +11,17 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         stage('Build Project') {
+        stage('Build Project') {
             steps {
                 echo 'Hello World'
             }
         }
-         stage('Push new Version') {
+        stage('Push new Version') {
             steps {
                 echo 'Hello World'
             }
         }
-         stage('Prepare env') {
+        stage('Prepare env') {
             steps {
                 echo 'Hello World'
             }
@@ -32,24 +31,30 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         stage('Anchorage scanning - nonblocking') {
+        stage('Anchorage scanning - nonblocking') {
             steps {
                 echo 'Hello World'
             }
         }
-         stage('Docker publish') {
+        stage('Docker publish') {
             steps {
                 echo 'Hello World'
             }
         }
-         stage('Deploy GCP Artifacts') {
+        stage('Deploy GCP Artifacts') {
             steps {
                 echo 'Hello World'
             }
         }
-         stage('Deployment to GCP') {
+        stage('Deployment to GCP') {
             steps {
                 echo 'Hello World'
+            }
+        }
+        stage('test stage') {
+            script {
+                def test_script = load "test_script.groovy"
+                test_script.another_stage()
             }
         }
     }

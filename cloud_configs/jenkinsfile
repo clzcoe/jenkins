@@ -2,10 +2,67 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('checkout') {
             steps {
                 echo 'Hello World'
             }
         }
+        stage('Determine Project Type') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Build Project') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Push new Version') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Prepare env') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Docker build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Anchorage scanning - nonblocking') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Docker publish') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Deploy GCP Artifacts') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Deployment to GCP') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+    
+    post {
+      success {
+        echo "job success"
+      }
+      failure {
+        echo "job failure"
+      }
+      unstable {
+        echo "job unstable"
+      }      
     }
 }

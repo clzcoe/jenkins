@@ -52,10 +52,12 @@ pipeline {
             }
         }
         stage('test stage') {
-            script {
-                def test_script = load "test_script.groovy"
-                test_script.another_stage()
-            }
+           steps {
+               script {
+                   def test_script = load "test_script.groovy"
+                   test_script.another_stage()
+               }
+           }
         }
     }
     

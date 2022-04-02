@@ -54,7 +54,7 @@ pipeline {
         stage('test stage') {
            steps {
                script {
-                   def test_script = load "test_script.groovy"
+                   def test_script = load "$workspace/test_script.groovy"
                    test_script.another_stage()
                }
            }

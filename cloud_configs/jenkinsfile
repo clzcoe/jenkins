@@ -52,13 +52,13 @@ pipeline {
                 script {
                    sh "ls -lrt $workspace/cloud_configs/test_script.groovy"
                    
-                   def file_status = fileExists('$workspace/cloud_configs/test_script.groovy')
+                   def file_status = fileExists("$workspace/cloud_configs/test_script.groovy")
                    echo "$file_status"
                 }
             }
         }
         stage('test stage') {
-           when { expression { return fileExists('$workspace/cloud_configs/test_script.groovy') } }
+           when { expression { return fileExists("$workspace/cloud_configs/test_script.groovy") } }
            steps {
                script {
                    def test_script = load "$workspace/cloud_configs/test_script.groovy"

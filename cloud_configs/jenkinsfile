@@ -51,6 +51,9 @@ pipeline {
                 echo 'Hello World'
                 script {
                    sh "ls $workspace/cloud_configs/test_script.groovy"
+                   
+                   def file_status = fileExists($workspace/cloud_configs/test_script.groovy)
+                   echo $file_status
                 }
             }
         }

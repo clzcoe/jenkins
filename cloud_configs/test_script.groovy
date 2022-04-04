@@ -1,6 +1,7 @@
 def another_stage() {
+
           script {
-                    echo "this is from called stage"
+                    echo "$pwd"
           }
           cleanWs()
 }

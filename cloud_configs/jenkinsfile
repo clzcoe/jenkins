@@ -52,9 +52,7 @@ pipeline {
             }
         }
         stage('test stage') {
-           when {
-                expression { fileExists('$workspace/cloud_configs/test_script.groovy') }
-           }
+           when { expression { return fileExists('$workspace/cloud_configs/test_script.groovy') } }
            steps {
                script {
                    def test_script = load "$workspace/cloud_configs/test_script.groovy"

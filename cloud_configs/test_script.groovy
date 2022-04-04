@@ -5,5 +5,5 @@ def another_stage() {
           return this
         }
     }
-return this
 }
+return this

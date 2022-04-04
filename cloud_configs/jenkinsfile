@@ -50,7 +50,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 script {
-                   ls "$workspace/cloud_configs/test_script.groovy"
+                   sh "ls $workspace/cloud_configs/test_script.groovy"
                 }
             }
         }

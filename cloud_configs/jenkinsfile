@@ -55,7 +55,7 @@ pipeline {
            steps {
                script {
                    def test_script = load "$workspace/cloud_configs/test_script.groovy"
-                   another_stage()
+                   test_script.another_stage()
                }
            }
         }

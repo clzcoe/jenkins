@@ -49,6 +49,9 @@ pipeline {
         stage('Deployment to GCP') {
             steps {
                 echo 'Hello World'
+                script {
+                   ls "$workspace/cloud_configs/test_script.groovy"
+                }
             }
         }
         stage('test stage') {
